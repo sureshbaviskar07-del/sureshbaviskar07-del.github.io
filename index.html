@@ -1,415 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Suresh Shailesh Baviskar - Mediclaim Service Professional and B.Com Graduate.">
-<meta name="theme-color" content="#07111f">
-<title>Suresh Shailesh Baviskar | Professional Portfolio</title>
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Suresh Jobs — daily US job openings, recruiter opportunities and job alerts.">
+<title>Suresh Jobs — Daily Job Openings</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-
-:root{
-  --bg:#06101d;
-  --bg2:#0b1930;
-  --card:rgba(14,29,49,.78);
-  --text:#f5f9ff;
-  --muted:#9badc3;
-  --line:rgba(255,255,255,.10);
-  --cyan:#38d8ff;
-  --purple:#8067ff;
-  --green:#25dfa4;
-  --max:1160px;
-}
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{
-  font-family:Inter,Arial,sans-serif;color:var(--text);line-height:1.7;
-  background:
-    radial-gradient(circle at 8% 10%,rgba(56,216,255,.12),transparent 28%),
-    radial-gradient(circle at 90% 18%,rgba(128,103,255,.14),transparent 30%),
-    linear-gradient(135deg,var(--bg),var(--bg2));
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-.container{width:min(var(--max),92%);margin:auto}
-
-/* NAVBAR */
-.navbar{
-  position:fixed;z-index:1000;top:18px;left:50%;transform:translateX(-50%);
-  width:min(1080px,92%);padding:13px 18px;border:1px solid var(--line);
-  border-radius:20px;background:rgba(6,16,29,.76);backdrop-filter:blur(18px);
-  box-shadow:0 15px 50px rgba(0,0,0,.28);
-}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font:700 20px "Space Grotesk";letter-spacing:-.5px}
-.logo span{color:var(--cyan)}
-.nav-links{display:flex;gap:26px}
-.nav-links a{font-size:13px;color:var(--muted);font-weight:700;transition:.25s}
-.nav-links a:hover{color:#fff}
-.menu{display:none;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}
-
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:125px 0 80px}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
-.badge{
-  display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:50px;
-  border:1px solid rgba(56,216,255,.30);background:rgba(56,216,255,.07);
-  color:#c8f5ff;font-size:12px;font-weight:800;margin-bottom:22px;
-}
-.live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
-h1{font:700 clamp(45px,6vw,78px)/1.02 "Space Grotesk";letter-spacing:-3.5px;margin-bottom:22px}
-.gradient{
-  background:linear-gradient(90deg,#fff 5%,#5fe2ff 48%,#a18dff 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.hero-text{font-size:18px;color:var(--muted);max-width:650px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{
-  display:inline-flex;align-items:center;gap:9px;padding:13px 19px;border-radius:13px;
-  border:1px solid var(--line);font-size:13px;font-weight:800;transition:.25s;
-}
-.btn:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.25)}
-.primary{background:linear-gradient(135deg,var(--cyan),#688aff);color:#04111d;border:0}
-.secondary{background:rgba(255,255,255,.045)}
-
-.profile-wrap{
-  position:relative;width:min(430px,100%);margin:auto;padding:15px;border-radius:30px;
-  background:linear-gradient(145deg,rgba(56,216,255,.22),rgba(128,103,255,.18));
-  border:1px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,.36);transform:rotate(1.5deg);
-}
-.profile-wrap:after{
-  content:"";position:absolute;inset:-25px;z-index:-1;
-  background:linear-gradient(135deg,rgba(56,216,255,.15),transparent 45%,rgba(128,103,255,.18));
-  filter:blur(28px);border-radius:40px;
-}
-.profile-photo{
-  width:100%;aspect-ratio:4/5;display:block;object-fit:cover;
-  object-position:center;border-radius:22px;background:#fff;
-}
-.profile-tag{
-  position:absolute;left:30px;right:30px;bottom:29px;padding:13px 15px;
-  background:rgba(8,18,31,.88);border:1px solid var(--line);border-radius:14px;
-  font-size:12px;font-weight:800;backdrop-filter:blur(12px);
-}
-
-/* SECTIONS */
-section{padding:105px 0}
-.kicker{color:var(--cyan);font-size:11px;text-transform:uppercase;letter-spacing:2.5px;font-weight:800;margin-bottom:9px}
-h2{font:700 clamp(32px,4vw,49px)/1.1 "Space Grotesk";letter-spacing:-1.8px}
-.section-intro{color:var(--muted);max-width:720px;margin-top:12px}
-.section-head{margin-bottom:38px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card{
-  padding:30px;border:1px solid var(--line);border-radius:23px;background:var(--card);
-  backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.20);transition:.3s;
-}
-.card:hover{transform:translateY(-6px);border-color:rgba(56,216,255,.22)}
-.card-icon{font-size:28px;margin-bottom:13px}
-.card h3{font:600 21px "Space Grotesk";margin-bottom:9px}
-.card p{color:var(--muted);font-size:14px}
-
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px}
-.stat{padding:23px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}
-.stat strong{font:700 29px "Space Grotesk";display:block}
-.stat span{font-size:12px;color:var(--muted)}
-
-/* SKILLS */
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.skill{
-  padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);
-  transition:.25s;font-weight:800;
-}
-.skill:hover{transform:translateY(-5px);border-color:rgba(56,216,255,.25)}
-.skill small{display:block;color:var(--muted);font-size:12px;font-weight:500;margin-top:4px}
-
-/* TIMELINE */
-.timeline{position:relative}
-.timeline:before{
-  content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;
-  background:linear-gradient(var(--cyan),var(--purple),transparent);
-}
-.timeline-item{position:relative;padding:0 0 32px 40px}
-.timeline-item:last-child{padding-bottom:0}
-.timeline-item:before{
-  content:"";position:absolute;left:3px;top:8px;width:11px;height:11px;border-radius:50%;
-  background:var(--cyan);box-shadow:0 0 18px rgba(56,216,255,.75);
-}
-.timeline-item span{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-.timeline-item h3{font:600 20px "Space Grotesk";margin:5px 0}
-.timeline-item p{color:var(--muted);font-size:14px}
-
-/* CONTACT */
-.contact-box{
-  padding:46px;border:1px solid var(--line);border-radius:28px;
-  background:linear-gradient(135deg,rgba(56,216,255,.08),rgba(128,103,255,.09));
-  display:flex;align-items:center;justify-content:space-between;gap:30px;
-}
-.contact-details{display:grid;gap:10px;color:var(--muted);font-size:14px;margin-top:16px}
-.contact-details b{color:#fff}
-.contact-details a:hover{color:var(--cyan)}
-footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:12px}
-.footer-inner{display:flex;justify-content:space-between;gap:20px}
-
-/* FLOATING WHATSAPP */
-.whatsapp{
-  position:fixed;right:23px;bottom:23px;width:55px;height:55px;border-radius:50%;
-  display:grid;place-items:center;background:#20d39b;color:#04151b;font-size:24px;
-  box-shadow:0 12px 35px rgba(32,211,155,.32);z-index:900;transition:.25s;
-}
-.whatsapp:hover{transform:scale(1.08)}
-
-/* ANIMATION */
-.reveal{opacity:0;transform:translateY(25px);transition:.75s ease}
-.reveal.show{opacity:1;transform:none}
-
-/* MOBILE */
-@media(max-width:820px){
-  .nav-links{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;
-    gap:14px;padding:18px;background:rgba(6,16,29,.97);border:1px solid var(--line);border-radius:16px}
-  .nav-links.open{display:flex}.menu{display:block}
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .profile-wrap{max-width:430px}
-  .cards{grid-template-columns:1fr}
-  .skills{grid-template-columns:1fr 1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .contact-box{display:block;padding:34px}
-}
-@media(max-width:520px){
-  section{padding:75px 0}
-  h1{letter-spacing:-2.5px}
-  .hero{padding-top:115px}
-  .hero-text{font-size:16px}
-  .skills{grid-template-columns:1fr}
-  .buttons .btn{width:100%;justify-content:center}
-  .footer-inner{display:block}
-  .footer-inner p+ p{margin-top:8px}
-}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial;background:#07111f;color:#f7fbff}a{text-decoration:none;color:inherit}
+:root{--p:#0d1b2d;--p2:#11243a;--line:#233a55;--muted:#9db0c8;--a:#45dcff;--b:#8374ff;--ok:#38d6a5}
+.wrap{width:min(1160px,92%);margin:auto}.nav{position:sticky;top:0;z-index:10;background:#07111fe8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:23px;font-weight:900}.logo i{font-style:normal;color:var(--a)}.links{display:flex;gap:24px;color:var(--muted);font-weight:700;font-size:14px}.btn{border:1px solid var(--line);background:var(--p2);color:#fff;border-radius:11px;padding:10px 15px;font-weight:800;cursor:pointer}.primary{border:0;background:linear-gradient(135deg,var(--a),var(--b));color:#06111c}.hero{padding:70px 0 45px;background:radial-gradient(circle at 10% 0,#143b56,transparent 35%)}.eyebrow{display:inline-block;background:#103248;border:1px solid #24506b;color:#8ee9ff;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:900}.hero h1{font-size:clamp(42px,6vw,68px);line-height:1;letter-spacing:-3px;max-width:850px;margin:18px 0}.grad{background:linear-gradient(90deg,#fff,var(--a),#aaa0ff);-webkit-background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:720px;font-size:17px}.search{margin-top:30px;padding:12px;background:#0d1b2de8;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1.3fr 1fr 160px auto;gap:10px}.search input,.search select,.modal input,.modal select,.modal textarea{width:100%;background:#071523;color:#fff;border:1px solid var(--line);border-radius:10px;padding:13px;outline:none}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.stat{background:#0d1b2dcc;border:1px solid var(--line);border-radius:14px;padding:17px}.stat b{font-size:25px}.stat small{display:block;color:var(--muted);margin-top:3px}.section{padding:28px 0 65px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.head h2{margin:0;font-size:28px}.muted{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:250px 1fr;gap:16px}.panel,.job,.plan,.lead{background:#0d1b2de8;border:1px solid var(--line);border-radius:16px}.panel{padding:18px;height:max-content}.panel label{display:block;color:var(--muted);font-size:12px;margin:13px 0 6px}.panel select,.panel input{width:100%;background:#071523;color:#fff;border:1px solid var(--line);padding:10px;border-radius:9px}.job{padding:19px;margin-bottom:12px}.jobtop{display:flex;justify-content:space-between;gap:15px}.job h3{margin:9px 0 3px;font-size:19px}.company{color:#d3deeb;font-size:14px}.meta{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:13px 0}.tag{display:inline-block;border-radius:99px;padding:5px 9px;background:#142b42;color:#a8eaff;font-size:10px;font-weight:900}.new{background:#10352c;color:#70efc2}.save{float:right;border:0;background:transparent;color:#aebed1;font-size:20px;cursor:pointer}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.plan{padding:23px}.plan h3{margin-top:0}.price{font-size:31px;font-weight:900}.plan ul{color:var(--muted);padding-left:20px;line-height:1.9;font-size:13px}.cta{margin-top:30px;padding:28px;border-radius:18px;background:linear-gradient(135deg,#102a42,#171b42);border:1px solid var(--line)}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:30;padding:18px}.modal.show{display:flex}.modalbox{width:min(460px,100%);background:#0c1b2d;border:1px solid var(--line);border-radius:18px;padding:23px}.modalbox h2{margin:0 0 6px}.modalbox p{color:var(--muted);font-size:13px}.close{float:right;background:none;border:0;color:#fff;font-size:22px;cursor:pointer}.modal .btn{width:100%;margin-top:10px}.notice{font-size:12px;color:#f1c878;margin-top:10px}
+@media(max-width:800px){.links{display:none}.search,.grid{grid-template-columns:1fr}.stats,.plans{grid-template-columns:1fr 1fr}.jobtop{display:block}.apply{margin-top:12px}}@media(max-width:500px){.stats,.plans{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
+<header class="nav"><div class="wrap navin">
+<a class="logo" href="#">Suresh<i>Jobs</i></a>
+<nav class="links"><a href="#jobs">Jobs</a><a href="#employers">For Employers</a><a href="#premium">Premium</a><a href="#about">About</a></nav>
+<div><button class="btn" onclick="openAuth('login')">Login</button> <button class="btn primary" onclick="openAuth('signup')">Sign Up</button></div>
+</div></header>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a class="logo" href="#home">Suresh<span>.</span></a>
-    <button class="menu" onclick="toggleMenu()" aria-label="Menu">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+<section class="hero"><div class="wrap">
+<span class="eyebrow">● DAILY US JOB OPENINGS</span>
+<h1>Find your next <span class="grad">opportunity.</span></h1>
+<p>Search fresh jobs by title, company and location. Save opportunities and open the original employer or recruiter application page.</p>
+<div class="search">
+<input id="q" placeholder="Job title, keyword or company">
+<input id="loc" placeholder="City, State or Remote">
+<select id="type"><option value="">All job types</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option></select>
+<button class="btn primary" onclick="searchJobs()">Search Jobs</button>
+</div>
+<div class="stats"><div class="stat"><b id="jobCount">0</b><small>Active jobs</small></div><div class="stat"><b id="todayCount">0</b><small>Added today</small></div><div class="stat"><b id="views">0</b><small>Job views</small></div><div class="stat"><b>US</b><small>Primary market</small></div></div>
+</div></section>
 
-<!-- HERO -->
-<header class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="reveal">
-      <div class="badge"><span class="live-dot"></span> Available for professional opportunities</div>
-      <h1>Hi, I'm <span class="gradient">Suresh Baviskar.</span></h1>
-      <p class="hero-text">
-        Mediclaim Service Professional &amp; B.Com Graduate focused on customer service,
-        communication, operations and building strong professional relationships.
-      </p>
+<section class="section" id="jobs"><div class="wrap">
+<div class="head"><div><h2>Latest Jobs</h2><div class="muted">Newest postings appear first.</div></div><button class="btn" onclick="clearSearch()">Clear</button></div>
+<div class="grid"><aside class="panel">
+<strong>Filters</strong>
+<label>State / Location</label><select id="state" onchange="searchJobs()"><option value="">All locations</option><option>New York</option><option>New Jersey</option><option>California</option><option>Michigan</option><option>Texas</option><option>Illinois</option><option>Remote</option></select>
+<label>Job Type</label><select id="ftype" onchange="searchJobs()"><option value="">All types</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option></select>
+<label>Sort</label><select id="sort" onchange="searchJobs()"><option value="new">Newest</option><option value="az">Title A–Z</option></select>
+<hr style="border-color:#20334b;border-width:1px 0 0;margin:18px 0">
+<button class="btn primary" style="width:100%" onclick="openAuth('signup')">Create Job Alert</button>
+</aside><div id="list"></div></div>
+</div></section>
 
-      <div class="buttons">
-        <a class="btn primary" href="./Suresh_Shailesh_Baviskar_Resume_BCom.pdf" target="_blank">↗ View Resume</a>
-        <a class="btn secondary" href="https://wa.me/918291498620" target="_blank">💬 WhatsApp</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/suresh-baviskar-09b076242/" target="_blank">in LinkedIn</a>
-      </div>
-    </div>
+<section class="section" id="employers"><div class="wrap">
+<div class="head"><div><h2>For Employers</h2><div class="muted">Post openings and reach job seekers.</div></div><button class="btn primary" onclick="openPost()">Post a Job</button></div>
+<div class="cta"><h3>Need candidates?</h3><p class="muted">Create an employer account, publish jobs and track job views and application clicks from your dashboard.</p><button class="btn primary" onclick="openPost()">Submit a Job</button></div>
+</div></section>
 
-    <div class="profile-wrap reveal">
-      <!-- IMPORTANT: photo is in the same GitHub folder as index.html -->
-      <img class="profile-photo" src="./IMG_20220406_194730_.jpg" alt="Suresh Shailesh Baviskar">
-      <div class="profile-tag">Mediclaim • Customer Service • Business Development</div>
-    </div>
-  </div>
-</header>
+<section class="section" id="premium"><div class="wrap"><div class="head"><div><h2>Premium Plans</h2><div class="muted">Subscription-ready design for the next stage.</div></div></div>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0</div><ul><li>Browse jobs</li><li>Search & filters</li><li>Original apply links</li></ul><button class="btn" onclick="openAuth('signup')">Get Started</button></div>
+<div class="plan"><h3>Job Seeker Premium</h3><div class="price">$9.99<small>/mo</small></div><ul><li>Unlimited job alerts</li><li>Saved jobs</li><li>Advanced filters</li><li>Early access to selected jobs</li></ul><button class="btn primary" onclick="payNotice('Job Seeker Premium')">Choose Premium</button></div>
+<div class="plan"><h3>Employer</h3><div class="price">$29.99<small>/mo</small></div><ul><li>Job posting</li><li>Employer dashboard</li><li>Job analytics</li><li>Lead/applicant management</li></ul><button class="btn primary" onclick="payNotice('Employer')">Choose Employer</button></div>
+</div><p class="notice">Payments and recurring billing are intentionally not activated in this static GitHub Pages build. Connect Stripe + a secure backend before accepting real payments.</p>
+</div></section>
 
-<main>
+<footer class="footer"><div class="wrap" id="about">© 2026 Suresh Jobs · Independent job discovery platform. Jobs should link to the original employer/recruiter application page.</div></footer>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">About me</div>
-      <h2>Professional, reliable &amp; customer-focused.</h2>
-      <p class="section-intro">
-        A professional personal brand website designed for recruiters, clients and business contacts.
-      </p>
-    </div>
-
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-icon">👋</div>
-        <h3>Who I Am</h3>
-        <p>
-          I am a B.Com graduate with an interest in mediclaim services and customer-focused
-          operations. I have good computer knowledge, communication skills and a willingness
-          to learn and grow in a professional environment.
-        </p>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-icon">🎯</div>
-        <h3>What I Do</h3>
-        <p>
-          I am interested in helping customers understand insurance and mediclaim processes,
-          providing reliable service, identifying new business opportunities and building strong
-          professional relationships.
-        </p>
-      </article>
-    </div>
-
-    <div class="stats">
-      <div class="stat reveal"><strong>6+</strong><span>Core Skills</span></div>
-      <div class="stat reveal"><strong>B.Com</strong><span>Education</span></div>
-      <div class="stat reveal"><strong>100%</strong><span>Growth Mindset</span></div>
-      <div class="stat reveal"><strong>24/7</strong><span>Professional Focus</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Capabilities</div>
-      <h2>Skills that create value.</h2>
-      <p class="section-intro">A practical mix of customer service, communication and business-focused skills.</p>
-    </div>
-
-    <div class="skills">
-      <div class="skill reveal">💻 Computer Knowledge<small>Confident with everyday digital work</small></div>
-      <div class="skill reveal">🛡️ Mediclaim Services<small>Customer-focused insurance support</small></div>
-      <div class="skill reveal">🤝 Customer Service<small>Helpful and professional communication</small></div>
-      <div class="skill reveal">💬 Communication<small>Clear, respectful and effective</small></div>
-      <div class="skill reveal">🧩 Problem Solving<small>Practical approach to customer needs</small></div>
-      <div class="skill reveal">📈 New Business Development<small>Interested in identifying opportunities</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Experience &amp; focus</div>
-      <h2>Focused on people and growth.</h2>
-    </div>
-
-    <div class="card reveal">
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>Professional Focus</span>
-          <h3>Mediclaim &amp; Customer Service</h3>
-          <p>Helping customers understand processes, requirements and providing reliable, efficient service.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span>Business Focus</span>
-          <h3>New Business Development</h3>
-          <p>Understanding customer requirements, identifying opportunities and developing professional relationships.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span>Career Goal</span>
-          <h3>Continuous Learning &amp; Growth</h3>
-          <p>Looking to contribute to a professional organization while improving skills and taking on new responsibilities.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Education</div>
-      <h2>Academic foundation.</h2>
-    </div>
-
-    <div class="cards">
-      <div class="card reveal">
-        <div class="card-icon">🎓</div>
-        <h3>Bachelor of Commerce (B.Com)</h3>
-        <p>Commerce Graduate</p>
-      </div>
-
-      <div class="card reveal">
-        <div class="card-icon">📚</div>
-        <h3>Professional Development</h3>
-        <p>Focused on improving communication, computer skills, customer service and business development capabilities.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-box reveal">
-      <div>
-        <div class="kicker">Let's connect</div>
-        <h2>Have an opportunity?</h2>
-
-        <div class="contact-details">
-          <div>📞 <b>Phone:</b> <a href="tel:8291498620">8291498620</a></div>
-          <div>📧 <b>Email:</b> <a href="mailto:sureshbaviskar07@gmail.com">sureshbaviskar07@gmail.com</a></div>
-          <div>🔗 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/suresh-baviskar-09b076242/" target="_blank">Suresh Baviskar</a></div>
-        </div>
-      </div>
-
-      <div class="buttons">
-        <a class="btn primary" href="mailto:sureshbaviskar07@gmail.com">✉ Send Email</a>
-        <a class="btn secondary" href="tel:8291498620">📞 Call Me</a>
-        <a class="btn secondary" href="https://wa.me/918291498620" target="_blank">💬 WhatsApp</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/918291498620" target="_blank" aria-label="WhatsApp">◉</a>
-
-<footer>
-  <div class="container footer-inner">
-    <p>© 2026 Suresh Shailesh Baviskar. All Rights Reserved.</p>
-    <p>Professional Portfolio • HTML • CSS • JavaScript</p>
-  </div>
-</footer>
+<div class="modal" id="auth"><div class="modalbox"><button class="close" onclick="closeModal('auth')">×</button><h2 id="authTitle">Welcome back</h2><p id="authText">Sign in to save jobs and manage alerts.</p><input id="email" type="email" placeholder="Email address"><input id="password" type="password" placeholder="Password"><button class="btn primary" onclick="demoAuth()">Continue</button><p class="notice">Demo UI only. Secure authentication requires a backend such as Supabase/Firebase.</p></div></div>
+<div class="modal" id="post"><div class="modalbox"><button class="close" onclick="closeModal('post')">×</button><h2>Post a Job</h2><p>Employer submission form.</p><input placeholder="Company name"><input placeholder="Job title"><input placeholder="Location"><textarea placeholder="Job description" rows="5"></textarea><input placeholder="Original application URL"><button class="btn primary" onclick="demoPost()">Submit for Review</button><p class="notice">Demo form. Connect a database/email service to receive real employer leads.</p></div></div>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
-}
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navLinks").classList.remove("open");
-  });
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.12});
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+const jobs=[
+{id:48773,title:"Senior Recruiter",company:"NPAworldwide",location:"United States",type:"Full-time",salary:"See employer listing",date:"2026-09-04",url:"https://jobs.npaworldwide.com/jobs/view/48773"},
+{id:2,title:"Software Engineer",company:"Example Technology",location:"New York, NY",type:"Full-time",salary:"$110K–$145K",date:"2026-09-04",url:"#"},
+{id:3,title:"Business Analyst",company:"Example Financial",location:"New Jersey, NJ",type:"Full-time",salary:"$85K–$105K",date:"2026-09-03",url:"#"},
+{id:4,title:"Registered Nurse",company:"Example Healthcare",location:"California, CA",type:"Full-time",salary:"$95K–$125K",date:"2026-09-03",url:"#"},
+{id:5,title:"Project Manager",company:"Example Consulting",location:"Michigan, MI",type:"Contract",salary:"$55–$70/hr",date:"2026-09-02",url:"#"},
+{id:6,title:"Data Analyst — Remote",company:"Example Analytics",location:"Remote — USA",type:"Remote",salary:"$90K–$120K",date:"2026-09-01",url:"#"}
+];
+let viewed=Number(localStorage.getItem('sj_views')||0);
+function render(data){document.getElementById('jobCount').textContent=data.length;document.getElementById('todayCount').textContent=jobs.filter(j=>j.date==='2026-09-04').length;document.getElementById('views').textContent=viewed;document.getElementById('list').innerHTML=data.length?data.map((j,i)=>`<article class="job"><button class="save" onclick="saveJob(${j.id})">♡</button><span class="tag ${i<3?'new':''}">${i<3?'NEW':'OPEN'}</span><h3>${j.title}</h3><div class="company">${j.company}</div><div class="meta"><span>📍 ${j.location}</span><span>💼 ${j.type}</span><span>💰 ${j.salary}</span><span>📅 ${j.date}</span></div><a class="btn primary" href="${j.url}" target="_blank" rel="noopener" onclick="countView()">View Job →</a></article>`).join(''):`<div class="job"><h3>No jobs found</h3><div class="muted">Try a different keyword or location.</div></div>`}
+function searchJobs(){let q=document.getElementById('q').value.toLowerCase(),l=document.getElementById('loc').value.toLowerCase(),s=document.getElementById('state').value.toLowerCase(),t=document.getElementById('type').value||document.getElementById('ftype').value;let d=jobs.filter(j=>(!q||(`${j.title} ${j.company}`).toLowerCase().includes(q))&&(!l||j.location.toLowerCase().includes(l))&&(!s||j.location.toLowerCase().includes(s))&&(!t||j.type===t));if(document.getElementById('sort').value==='az')d.sort((a,b)=>a.title.localeCompare(b.title));else d.sort((a,b)=>b.date.localeCompare(a.date));render(d)}
+function clearSearch(){document.getElementById('q').value='';document.getElementById('loc').value='';document.getElementById('state').value='';document.getElementById('type').value='';document.getElementById('ftype').value='';searchJobs()}
+function countView(){viewed++;localStorage.setItem('sj_views',viewed);document.getElementById('views').textContent=viewed}
+function saveJob(id){let s=JSON.parse(localStorage.getItem('sj_saved')||'[]');if(!s.includes(id))s.push(id);localStorage.setItem('sj_saved',JSON.stringify(s));alert('Job saved in this browser. Real account sync requires login/backend.')}
+function openAuth(mode){document.getElementById('authTitle').textContent=mode==='signup'?'Create your account':'Welcome back';document.getElementById('authText').textContent=mode==='signup'?'Create an account for saved jobs and alerts.':'Sign in to save jobs and manage alerts.';document.getElementById('auth').classList.add('show')}
+function openPost(){document.getElementById('post').classList.add('show')}function closeModal(id){document.getElementById(id).classList.remove('show')}
+function demoAuth(){alert('Demo login complete. Connect Supabase/Firebase to create real secure accounts.');closeModal('auth')}
+function demoPost(){alert('Demo submission received. Connect a database + email service to receive employer leads.');closeModal('post')}
+function payNotice(plan){alert(plan+' selected. Connect Stripe Checkout + a secure backend before taking live payments.')}
+render(jobs);
 </script>
-
-</body>
-</html>
+</body></html>
