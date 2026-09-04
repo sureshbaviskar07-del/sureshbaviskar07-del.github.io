@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Suresh Jobs — daily US job openings, recruiter opportunities and job alerts.">
+<title>Suresh Jobs — Daily Job Openings</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial;background:#07111f;color:#f7fbff}a{text-decoration:none;color:inherit}
+:root{--p:#0d1b2d;--p2:#11243a;--line:#233a55;--muted:#9db0c8;--a:#45dcff;--b:#8374ff;--ok:#38d6a5}
+.wrap{width:min(1160px,92%);margin:auto}.nav{position:sticky;top:0;z-index:10;background:#07111fe8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:23px;font-weight:900}.logo i{font-style:normal;color:var(--a)}.links{display:flex;gap:24px;color:var(--muted);font-weight:700;font-size:14px}.btn{border:1px solid var(--line);background:var(--p2);color:#fff;border-radius:11px;padding:10px 15px;font-weight:800;cursor:pointer}.primary{border:0;background:linear-gradient(135deg,var(--a),var(--b));color:#06111c}.hero{padding:70px 0 45px;background:radial-gradient(circle at 10% 0,#143b56,transparent 35%)}.eyebrow{display:inline-block;background:#103248;border:1px solid #24506b;color:#8ee9ff;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:900}.hero h1{font-size:clamp(42px,6vw,68px);line-height:1;letter-spacing:-3px;max-width:850px;margin:18px 0}.grad{background:linear-gradient(90deg,#fff,var(--a),#aaa0ff);-webkit-background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:720px;font-size:17px}.search{margin-top:30px;padding:12px;background:#0d1b2de8;border:1px solid var(--line);border-radius:18px;display:grid;grid-template-columns:1.3fr 1fr 160px auto;gap:10px}.search input,.search select,.modal input,.modal select,.modal textarea{width:100%;background:#071523;color:#fff;border:1px solid var(--line);border-radius:10px;padding:13px;outline:none}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.stat{background:#0d1b2dcc;border:1px solid var(--line);border-radius:14px;padding:17px}.stat b{font-size:25px}.stat small{display:block;color:var(--muted);margin-top:3px}.section{padding:28px 0 65px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.head h2{margin:0;font-size:28px}.muted{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:250px 1fr;gap:16px}.panel,.job,.plan,.lead{background:#0d1b2de8;border:1px solid var(--line);border-radius:16px}.panel{padding:18px;height:max-content}.panel label{display:block;color:var(--muted);font-size:12px;margin:13px 0 6px}.panel select,.panel input{width:100%;background:#071523;color:#fff;border:1px solid var(--line);padding:10px;border-radius:9px}.job{padding:19px;margin-bottom:12px}.jobtop{display:flex;justify-content:space-between;gap:15px}.job h3{margin:9px 0 3px;font-size:19px}.company{color:#d3deeb;font-size:14px}.meta{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:13px 0}.tag{display:inline-block;border-radius:99px;padding:5px 9px;background:#142b42;color:#a8eaff;font-size:10px;font-weight:900}.new{background:#10352c;color:#70efc2}.save{float:right;border:0;background:transparent;color:#aebed1;font-size:20px;cursor:pointer}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.plan{padding:23px}.plan h3{margin-top:0}.price{font-size:31px;font-weight:900}.plan ul{color:var(--muted);padding-left:20px;line-height:1.9;font-size:13px}.cta{margin-top:30px;padding:28px;border-radius:18px;background:linear-gradient(135deg,#102a42,#171b42);border:1px solid var(--line)}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:30;padding:18px}.modal.show{display:flex}.modalbox{width:min(460px,100%);background:#0c1b2d;border:1px solid var(--line);border-radius:18px;padding:23px}.modalbox h2{margin:0 0 6px}.modalbox p{color:var(--muted);font-size:13px}.close{float:right;background:none;border:0;color:#fff;font-size:22px;cursor:pointer}.modal .btn{width:100%;margin-top:10px}.notice{font-size:12px;color:#f1c878;margin-top:10px}
+@media(max-width:800px){.links{display:none}.search,.grid{grid-template-columns:1fr}.stats,.plans{grid-template-columns:1fr 1fr}.jobtop{display:block}.apply{margin-top:12px}}@media(max-width:500px){.stats,.plans{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin">
+<a class="logo" href="#">Suresh<i>Jobs</i></a>
+<nav class="links"><a href="#jobs">Jobs</a><a href="#employers">For Employers</a><a href="#premium">Premium</a><a href="#about">About</a></nav>
+<div><button class="btn" onclick="openAuth('login')">Login</button> <button class="btn primary" onclick="openAuth('signup')">Sign Up</button></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<span class="eyebrow">● DAILY US JOB OPENINGS</span>
+<h1>Find your next <span class="grad">opportunity.</span></h1>
+<p>Search fresh jobs by title, company and location. Save opportunities and open the original employer or recruiter application page.</p>
+<div class="search">
+<input id="q" placeholder="Job title, keyword or company">
+<input id="loc" placeholder="City, State or Remote">
+<select id="type"><option value="">All job types</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option></select>
+<button class="btn primary" onclick="searchJobs()">Search Jobs</button>
+</div>
+<div class="stats"><div class="stat"><b id="jobCount">0</b><small>Active jobs</small></div><div class="stat"><b id="todayCount">0</b><small>Added today</small></div><div class="stat"><b id="views">0</b><small>Job views</small></div><div class="stat"><b>US</b><small>Primary market</small></div></div>
+</div></section>
+
+<section class="section" id="jobs"><div class="wrap">
+<div class="head"><div><h2>Latest Jobs</h2><div class="muted">Newest postings appear first.</div></div><button class="btn" onclick="clearSearch()">Clear</button></div>
+<div class="grid"><aside class="panel">
+<strong>Filters</strong>
+<label>State / Location</label><select id="state" onchange="searchJobs()"><option value="">All locations</option><option>New York</option><option>New Jersey</option><option>California</option><option>Michigan</option><option>Texas</option><option>Illinois</option><option>Remote</option></select>
+<label>Job Type</label><select id="ftype" onchange="searchJobs()"><option value="">All types</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Remote</option></select>
+<label>Sort</label><select id="sort" onchange="searchJobs()"><option value="new">Newest</option><option value="az">Title A–Z</option></select>
+<hr style="border-color:#20334b;border-width:1px 0 0;margin:18px 0">
+<button class="btn primary" style="width:100%" onclick="openAuth('signup')">Create Job Alert</button>
+</aside><div id="list"></div></div>
+</div></section>
+
+<section class="section" id="employers"><div class="wrap">
+<div class="head"><div><h2>For Employers</h2><div class="muted">Post openings and reach job seekers.</div></div><button class="btn primary" onclick="openPost()">Post a Job</button></div>
+<div class="cta"><h3>Need candidates?</h3><p class="muted">Create an employer account, publish jobs and track job views and application clicks from your dashboard.</p><button class="btn primary" onclick="openPost()">Submit a Job</button></div>
+</div></section>
+
+<section class="section" id="premium"><div class="wrap"><div class="head"><div><h2>Premium Plans</h2><div class="muted">Subscription-ready design for the next stage.</div></div></div>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0</div><ul><li>Browse jobs</li><li>Search & filters</li><li>Original apply links</li></ul><button class="btn" onclick="openAuth('signup')">Get Started</button></div>
+<div class="plan"><h3>Job Seeker Premium</h3><div class="price">$9.99<small>/mo</small></div><ul><li>Unlimited job alerts</li><li>Saved jobs</li><li>Advanced filters</li><li>Early access to selected jobs</li></ul><button class="btn primary" onclick="payNotice('Job Seeker Premium')">Choose Premium</button></div>
+<div class="plan"><h3>Employer</h3><div class="price">$29.99<small>/mo</small></div><ul><li>Job posting</li><li>Employer dashboard</li><li>Job analytics</li><li>Lead/applicant management</li></ul><button class="btn primary" onclick="payNotice('Employer')">Choose Employer</button></div>
+</div><p class="notice">Payments and recurring billing are intentionally not activated in this static GitHub Pages build. Connect Stripe + a secure backend before accepting real payments.</p>
+</div></section>
+
+<footer class="footer"><div class="wrap" id="about">© 2026 Suresh Jobs · Independent job discovery platform. Jobs should link to the original employer/recruiter application page.</div></footer>
+
+<div class="modal" id="auth"><div class="modalbox"><button class="close" onclick="closeModal('auth')">×</button><h2 id="authTitle">Welcome back</h2><p id="authText">Sign in to save jobs and manage alerts.</p><input id="email" type="email" placeholder="Email address"><input id="password" type="password" placeholder="Password"><button class="btn primary" onclick="demoAuth()">Continue</button><p class="notice">Account data is stored only in this browser for now. Payments and cloud sync can be added later.</p></div></div>
+<div class="modal" id="post"><div class="modalbox"><button class="close" onclick="closeModal('post')">×</button><h2>Post a Job</h2><p>Employer submission form.</p><input placeholder="Company name"><input placeholder="Job title"><input placeholder="Location"><textarea placeholder="Job description" rows="5"></textarea><input placeholder="Original application URL"><button class="btn primary" onclick="demoPost()">Submit for Review</button><p class="notice">Demo form. Connect a database/email service to receive real employer leads.</p></div></div>
+
+<script>
+const jobs=[
+{id:48773,title:"Senior Recruiter",company:"NPAworldwide",location:"United States",type:"Full-time",salary:"See employer listing",date:"2026-09-04",url:"https://jobs.npaworldwide.com/jobs/view/48773"},
+{id:2,title:"Software Engineer",company:"Example Technology",location:"New York, NY",type:"Full-time",salary:"$110K–$145K",date:"2026-09-04",url:"#"},
+{id:3,title:"Business Analyst",company:"Example Financial",location:"New Jersey, NJ",type:"Full-time",salary:"$85K–$105K",date:"2026-09-03",url:"#"},
+{id:4,title:"Registered Nurse",company:"Example Healthcare",location:"California, CA",type:"Full-time",salary:"$95K–$125K",date:"2026-09-03",url:"#"},
+{id:5,title:"Project Manager",company:"Example Consulting",location:"Michigan, MI",type:"Contract",salary:"$55–$70/hr",date:"2026-09-02",url:"#"},
+{id:6,title:"Data Analyst — Remote",company:"Example Analytics",location:"Remote — USA",type:"Remote",salary:"$90K–$120K",date:"2026-09-01",url:"#"}
+];
+let viewed=Number(localStorage.getItem('sj_views')||0);
+function render(data){document.getElementById('jobCount').textContent=data.length;document.getElementById('todayCount').textContent=jobs.filter(j=>j.date==='2026-09-04').length;document.getElementById('views').textContent=viewed;document.getElementById('list').innerHTML=data.length?data.map((j,i)=>`<article class="job"><button class="save" onclick="saveJob(${j.id})">♡</button><span class="tag ${i<3?'new':''}">${i<3?'NEW':'OPEN'}</span><h3>${j.title}</h3><div class="company">${j.company}</div><div class="meta"><span>📍 ${j.location}</span><span>💼 ${j.type}</span><span>💰 ${j.salary}</span><span>📅 ${j.date}</span></div><a class="btn primary" href="${j.url}" target="_blank" rel="noopener" onclick="countView()">View Job →</a></article>`).join(''):`<div class="job"><h3>No jobs found</h3><div class="muted">Try a different keyword or location.</div></div>`}
+function searchJobs(){let q=document.getElementById('q').value.toLowerCase(),l=document.getElementById('loc').value.toLowerCase(),s=document.getElementById('state').value.toLowerCase(),t=document.getElementById('type').value||document.getElementById('ftype').value;let d=jobs.filter(j=>(!q||(`${j.title} ${j.company}`).toLowerCase().includes(q))&&(!l||j.location.toLowerCase().includes(l))&&(!s||j.location.toLowerCase().includes(s))&&(!t||j.type===t));if(document.getElementById('sort').value==='az')d.sort((a,b)=>a.title.localeCompare(b.title));else d.sort((a,b)=>b.date.localeCompare(a.date));render(d)}
+function clearSearch(){document.getElementById('q').value='';document.getElementById('loc').value='';document.getElementById('state').value='';document.getElementById('type').value='';document.getElementById('ftype').value='';searchJobs()}
+function countView(){viewed++;localStorage.setItem('sj_views',viewed);document.getElementById('views').textContent=viewed}
+function saveJob(id){let s=JSON.parse(localStorage.getItem('sj_saved')||'[]');if(!s.includes(id))s.push(id);localStorage.setItem('sj_saved',JSON.stringify(s));alert('Job saved in this browser. Real account sync requires login/backend.')}
+let authMode='login';
+function openAuth(mode){
+  authMode=mode;
+  document.getElementById('authTitle').textContent=mode==='signup'?'Create your account':'Welcome back';
+  document.getElementById('authText').textContent=mode==='signup'?'Create an account for saved jobs and alerts.':'Sign in to save jobs and manage alerts.';
+  document.getElementById('email').value='';
+  document.getElementById('password').value='';
+  document.getElementById('auth').classList.add('show');
+}
+function openPost(){document.getElementById('post').classList.add('show')}
+function closeModal(id){document.getElementById(id).classList.remove('show')}
+function demoAuth(){
+  const email=document.getElementById('email').value.trim().toLowerCase();
+  const password=document.getElementById('password').value;
+  if(!email || !password){alert('Please enter your email and password.');return}
+  if(password.length<6){alert('Password must be at least 6 characters.');return}
+  const key='sj_account_'+email;
+  if(authMode==='signup'){
+    if(localStorage.getItem(key)){alert('An account with this email already exists. Please Login.');return}
+    localStorage.setItem(key,JSON.stringify({email,password,createdAt:new Date().toISOString()}));
+    localStorage.setItem('sj_current_user',email);
+    alert('Account created successfully. You are now logged in.');
+  }else{
+    const saved=localStorage.getItem(key);
+    if(!saved){alert('No account found for this email. Please Sign Up first.');return}
+    const account=JSON.parse(saved);
+    if(account.password!==password){alert('Incorrect password.');return}
+    localStorage.setItem('sj_current_user',email);
+    alert('Login successful. Welcome to Suresh Jobs!');
+  }
+  closeModal('auth'); updateUserUI();
+}
+function updateUserUI(){
+  const user=localStorage.getItem('sj_current_user');
+  if(user){
+    document.querySelector('.actions').innerHTML='<button class="btn" onclick="logout()">Logout</button><span class="btn primary">'+user+'</span>';
+  }
+}
+function logout(){localStorage.removeItem('sj_current_user');location.reload()}
+function demoPost(){
+  const inputs=document.querySelectorAll('#post input, #post textarea');
+  const values=[...inputs].map(x=>x.value.trim());
+  if(values.some(v=>!v)){alert('Please complete all job fields.');return}
+  const leads=JSON.parse(localStorage.getItem('sj_employer_leads')||'[]');
+  leads.push({company:values[0],title:values[1],location:values[2],description:values[3],url:values[4],submittedAt:new Date().toISOString()});
+  localStorage.setItem('sj_employer_leads',JSON.stringify(leads));
+  alert('Job submission saved successfully on this browser.');
+  closeModal('post');
+}
+function payNotice(plan){alert(plan+' is selected. Payment is not activated yet, as requested. We can connect real payment later.')}
+updateUserUI();
+render(jobs);
+</script>
+</body></html>
